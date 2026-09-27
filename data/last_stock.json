@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27T13:39:46.297491+00:00",
+  "last_updated": "2026-09-27T14:02:24.146141+00:00",
   "products": {
     "2540127": {
       "title": "[HGGQ 11] 1/144 샤아 전용 자쿠(지쿠악스) [7월입고완료] [4573102691903]",
@@ -8,11 +8,12 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2540127",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/084790001764573676_2540127.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
       "last_seen": "2026-09-27T13:39:46.297491+00:00",
-      "restocked_at": "2026-09-27T13:39:46.297491+00:00"
+      "restocked_at": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2540125": {
       "title": "[HGGQ 12] 1/144 하얀 건담 [5월입고완료] [4573102691897]",
@@ -21,10 +22,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2540125",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/605318001764573723_2540125.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2540083": {
       "title": "[HGGQ 10] 1/144 자쿠(지쿠악스) [6월입고완료] [4573102691736]",
@@ -33,10 +35,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2540083",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/512166001763616882_2540083.JPG",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2540074": {
       "title": "[HGGQ 15] 1/144 함브라비(지쿠악스) [10월입고예정] [4573102725608]",
@@ -45,10 +48,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2540074",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/122999001782118478_2540074.jpg",
       "is_reserved": true,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2539997": {
       "title": "[HGGQ 08] 1/144 지프레드 [4월입고완료] [4573102686824]",
@@ -57,10 +61,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2539997",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/485788001763346064_2539997.JPG",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2539757": {
       "title": "[HGGQ 09] 1/144 릭돔 가이아/올테가기(지쿠악스) [9월입고완료] [4573102688682]",
@@ -69,10 +74,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2539757",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/451506001762225309_2539757.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2539029": {
       "title": "[HGGQ 05] 1/144 겔구그 보카타기(GQ) [5월입고완료] [4573102685902]",
@@ -81,10 +87,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2539029",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/868032001758609881_2539029.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2538496": {
       "title": "[HGGQ 07] 1/144 이그자베 전용 걍(하쿠지 장비) [10월입고예정] [4573102685940]",
@@ -93,10 +100,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2538496",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/491745001756100084_2538496.JPG",
       "is_reserved": true,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2538494": {
       "title": "[HGGQ 14] 1/144 샤리아 전용 릭돔(지쿠악스) [5월입고완료] [4573102720184]",
@@ -105,10 +113,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2538494",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/150534001770010330_2538494.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2538493": {
       "title": "[HGGQ 13] 1/44 건담 지쿠악스 엔디미온 유닛 각성 [4월입고완료] [4573102720009]",
@@ -117,10 +126,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2538493",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/782933001767672363_2538493.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2537145": {
       "title": "[HGGQ 03] 1/144 겔구그 스가이기(GQ) [4월입고완료] [4573102685704]",
@@ -129,10 +139,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2537145",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/987695001748416642_2537145.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2535635": {
       "title": "[HGGQ 04] 1/144 붉은 건담 [9월입고완료] [4573102685698]",
@@ -141,10 +152,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2535635",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/359918001756286051_2535635.JPG",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     },
     "2534538": {
       "title": "[HGGQ 01] 1/144 건담 지쿠악스 [2월입고완료] [4573102683175]",
@@ -153,10 +165,11 @@
       "link": "https://gundamboom.com/product/detail.html?product_no=2534538",
       "img_url": "https://pics2.gundamboom.kr/web/product/small/673795001733278554_2534538.jpg",
       "is_reserved": false,
-      "is_available": true,
+      "is_available": false,
       "keyword": "gq",
       "first_seen": "2026-09-27T13:39:25.070253+00:00",
-      "last_seen": "2026-09-27T13:39:46.297491+00:00"
+      "last_seen": "2026-09-27T13:39:46.297491+00:00",
+      "soldout_at": "2026-09-27T14:02:24.146141+00:00"
     }
   }
 }
