@@ -6,16 +6,36 @@ import requests
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://gundamboom.com/product/search.html"
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"
+MAIN_URL = "https://gundamboom.com/"
+
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate",
+    "Referer": "https://gundamboom.com/",
+    "Sec-Ch-Ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Windows"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1"
 }
 
 def extract_product_no(link: str) -> str:
     """상품 링크에서 product_no 추출"""
     match = re.search(r'product_no=(\d+)', link)
     return match.group(1) if match else ""
+
+def check_ip_and_diagnose(session: requests.Session):
+    """403 발생 시 러너 IP 및 원인 진단"""
+    try:
+        ip_info = requests.get("https://ipinfo.io/json", timeout=5).json()
+        print(f"[진단 정보] 현재 러너 IP: {ip_info.get('ip')} (국가: {ip_info.get('country')}, 호스팅: {ip_info.get('org')})")
+    except Exception:
+        pass
 
 def scrape_keyword_all_pages(keyword: str, max_pages: int = 50, delay: float = 0.5) -> dict:
     """
@@ -29,6 +49,20 @@ def scrape_keyword_all_pages(keyword: str, max_pages: int = 50, delay: float = 0
     available_products = []
     soldout_products = []
     
+    session = requests.Session()
+    session.headers.update(BROWSER_HEADERS)
+
+    # 1. 메인 페이지 방문을 통한 세션 쿠키 획득
+    try:
+        main_resp = session.get(MAIN_URL, timeout=10)
+        if main_resp.status_code == 403:
+            print("[!] 건담붐 메인 페이지에서 403 Forbidden 차단이 감지되었습니다.")
+            print("[!] 원인: 건담붐(가비아 웹호스팅) 방화벽이 GitHub Actions의 해외/클라우드 IP 대역을 차단하고 있습니다.")
+            check_ip_and_diagnose(session)
+            return {'keyword': keyword, 'available': [], 'soldout': []}
+    except Exception as e:
+        print(f"[!] 메인 페이지 접속 시도 중 에러: {e}")
+    
     print(f"[*] '{keyword}' 검색 시작 (전체 페이지 탐색 중...)")
     
     for page in range(1, max_pages + 1):
@@ -36,7 +70,11 @@ def scrape_keyword_all_pages(keyword: str, max_pages: int = 50, delay: float = 0
         req_url = f"{BASE_URL}?search={encoded_kw}&poomjulX=true&page={page}"
         
         try:
-            resp = requests.get(req_url, headers=HEADERS, timeout=15)
+            resp = session.get(req_url, timeout=15)
+            if resp.status_code == 403:
+                print(f"[!] {page}페이지 요청 403 Forbidden 발생!")
+                check_ip_and_diagnose(session)
+                break
             resp.raise_for_status()
         except Exception as e:
             print(f"[!] {page}페이지 요청 실패: {e}")
@@ -119,11 +157,10 @@ def scrape_keyword_all_pages(keyword: str, max_pages: int = 50, delay: float = 0
             else:
                 available_products.append(product_info)
                 
-        # 이번 페이지에서 새로 추가된 상품이 없으면 (예: 마지막 페이지 도달 후 동일 페이지 반복 등)
+        # 이번 페이지에서 새로 추가된 상품이 없으면 탐색 종료
         if new_items_in_page == 0:
             break
             
-        # 서버 과부하 방지 딜레이
         time.sleep(delay)
         
     print(f"[*] '{keyword}' 탐색 완료: 총 {len(available_products)}개 재고/예약 상품 확인됨")
